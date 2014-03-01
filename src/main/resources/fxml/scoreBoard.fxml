@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bskapp.controller.ScoreController">
+    <children>
+        <BorderPane>
+            <top>
+                <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="teamRedName" text="TeamA" GridPane.columnSpan="3" />
+                        <Label fx:id="teamWhiteName" text="TeamB" GridPane.columnIndex="4" GridPane.columnSpan="3" />
+                        <Label fx:id="redTotalScore" text="42" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ProgressBar fx:id="teamRedFoul" progress="1.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label text="vs" GridPane.columnIndex="3" />
+                        <Label fx:id="whiteTotalScore" text="23" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <ProgressBar fx:id="teamWhiteFoul" progress="0.2" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+            </top>
+            <center>
+              <fx:include fx:id="childBench" source="scoreBoard/stateArea.fxml" />
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
